@@ -1,0 +1,89 @@
+Working with Strings and Integers
+
+Complete the following exercises to solidify your understandings of strings and integers.
+
+Just Strings
+
+1. First & Last
+
+If you have the strings "First" and "Last" in the following variables:
+
+f = "First"
+l = "Last"
+Use only the "string concatenation" technique to complete the following:
+
+What code can you write to output the string "FirstLast"? 
+f + l  /  "#{f}#{l}"
+What code can you write to output the string "LastFirst"? 
+l + f  /  "#{l}#{f}"
+What code can you write to output the string "First Last"? 
+f + ' ' + l  /  "#{f} #{l}"
+What code can you write to output the string "Last First Last First"? 
+l + ' ' + f + ' ' + l + ' ' + f   /  "#{l} #{f} #{l} #{f}"
+Then repeat 1-4 using only the "string interpolation" technique. 
+
+2. Names
+
+Start with this string:
+
+name_1 = "Megan Smith"
+name_2 = "Todd Park"
+Can you come up with two ways to output just the fragment "Megan" from name_1? 
+name_1[0..4], "Megan Smith"[0..4]
+Would either of your techniques from A would work to output "Todd" from name_2? Why or why not? 
+Yes it would work because it's a string and can use the same method.
+Write code that can output the initials of name_2. 
+name_2[0] + name_2[5]
+
+Just Integers
+
+Start with these numbers:
+
+a = 12
+b = 65
+c = 31
+d = 98
+Write code to find the average of these four numbers. 
+sum = a + b + c + d   total = sum / 4
+Find the average yourself using paper or a calculator. Is your answer different than you found in A? Why?
+The answer is the same (51.5)
+Say you have the operation a + b * c / d. What result do you get out from Ruby? What other outputs can you get out by adding one or more pairs of parentheses to the equation?
+The result is 32. (a + b) * c / d = 24, (a + b) * (c / d) = 0
+Strings & Integers
+
+People
+
+Say we have these people:
+
+a = "Ezra"
+b = "Ada"
+c = "Yukihiro"
+d = "Grace"
+Write code to output both the total characters in all the names together and the average length of the names.
+combined_names = a + b + c + d
+combined_names.length
+
+Happy Birthday
+
+In our family we like to say "Happy" once for every year of your age when we say "Happy birthday!". So when you turn four we'd say "Happy happy happy happy birthday!" Note the capitalization.
+
+Say you have an age variable that holds the person's age. Write code to output the appropriate greeting.
+word_repetition = age - 1
+say_happy = 'happy ' * word_repetition
+birthday_message = "Happy #{say_happy} birthday!"
+
+String Compression
+
+There's a silly compression algorithm that outputs the first letter, the number of letters in the middle, and the last letter. So for the string "Kalamazoo" it'd output "K7o" or "Denver" would be "D4r". Can you write code to implement that?
+ 
+ Pseudocode:
+ Find the length of the string
+ Subtract the length of the string by 2 and that will give you the number of letters in middle (amount_of_letters)
+ Convert amount_of_letters into a string
+ Create a new variable equals to the first letter plus the amount_of_letters plus the last letter
+ 
+ code:
+ str = "Watermelon"
+ amount_of_letters = str.length - 2
+ last_letter = str.length - 1
+ compressed_word = str[0] + amount_of_letters.to_s + str[last_letter]

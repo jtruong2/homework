@@ -1,3 +1,4 @@
+Jimmy Truong
 =begin
 Bad connection
 1. In this exercise, the problem will be solved when the user has a full conversation with the program.
